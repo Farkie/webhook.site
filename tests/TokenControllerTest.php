@@ -11,6 +11,7 @@ class TokenControllerTest extends TestCase
             'ip',
             'user_agent',
             'default_content',
+            'default_headers',
             'default_status',
             'default_content_type',
             'timeout',
@@ -23,6 +24,7 @@ class TokenControllerTest extends TestCase
     {
         $tokenData = [
             'default_content' => $this->faker()->text,
+            'default_headers' => '{"testHeader": true}',
             'default_content_type' => 'application/json',
             'default_status' => 201,
             'timeout' => 0,
@@ -41,6 +43,7 @@ class TokenControllerTest extends TestCase
 
         $tokenData = [
             'default_content' => $this->faker()->text,
+            'default_headers' => '{"testHeader": true}',
             'default_content_type' => 'text/plain',
             'default_status' => 200,
             'timeout' => 1,

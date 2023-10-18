@@ -23,6 +23,7 @@ class CreateTokenRequest extends Request
     {
         return [
             'default_content' => ['string'],
+            'default_headers' => ['string'],
             'default_content_type' => ['string'],
             'default_status' => ['int'],
             'timeout' => ['int', 'min:0', 'max:10'],

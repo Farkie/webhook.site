@@ -71,6 +71,7 @@ class TokenController extends Controller
         $token = $this->tokens->find($tokenId);
 
         $token->default_content = $request->get('default_content', '');
+        $token->default_headers = $request->get('default_headers', '');
         $token->default_status = (int)$request->get('default_status', 200);
         $token->default_content_type = $request->get('default_content_type', 'text/plain');
         $token->timeout = (int)$request->get('timeout', null);

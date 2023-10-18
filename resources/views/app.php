@@ -487,6 +487,15 @@
                                 </div>
                             </div>
 
+                            <!-- Textarea -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="default_headers">Response Headers</label>
+                                <div class="col-md-7">
+                                    <textarea class="form-control" id="default_headers" name="default_headers"
+                                              rows="5" ng-model="token.default_headers"></textarea>
+                                </div>
+                            </div>
+
                         </fieldset>
                     </form>
 
@@ -556,6 +565,15 @@
                                 <label class="col-md-4 control-label" for="default_content">Response body</label>
                                 <div class="col-md-7">
                                     <textarea class="form-control" id="default_content" name="default_content"
+                                              rows="5"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Textarea -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="default_headers">Response Headers</label>
+                                <div class="col-md-7">
+                                    <textarea class="form-control" id="default_headers" name="default_headers"
                                               rows="5"></textarea>
                                 </div>
                             </div>

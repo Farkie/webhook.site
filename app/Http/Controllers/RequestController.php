@@ -64,14 +64,23 @@ class RequestController extends Controller
             ? $httpRequest->segment(2)
             : $token->default_status;
 
+        $headers = [];
+
+        if ($token->default_headers) {
+            $headers = json_decode($token->default_headers, true);
+        }
+
         $response = new Response(
             $token->default_content,
             $responseStatus,
-            [
+            array_merge(
+                [
                 'Content-Type' => $token->default_content_type,
                 'X-Request-Id' => $request->uuid,
                 'X-Token-Id' => $token->uuid,
-            ]
+                ],
+                $headers
+            )
         );
 
         if ($token->cors) {
